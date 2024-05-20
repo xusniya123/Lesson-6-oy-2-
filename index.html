@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+      padding: 50px;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+      
+    }
+
+    .Projects {
+        font-size: 90px;
+    }
+    span{
+        color: gray;
+        font-size: 50px;
+       
+    }
+    p {
+        text-align: left;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      /* display: flex; */
+      justify-content: center;
+      align-items: center;
+      /* border: 2px solid red; */
+    }
+
+    img {
+        width: 90%;
+       height: 300px;
+    }
+
+    @media (max-width: 760px) {
+      .swiper-button-next {
+        right: 20px;
+        transform: rotate(90deg);
+      }
+
+      .swiper-button-prev {
+        left: 20px;
+        transform: rotate(90deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="Projects">Projects and <br> practice</h1>
+   
+  <!-- Swiper -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <!-- <div class="swiper-slide">
+      </div> -->
+      <div class="swiper-slide"><p><span>01</span> <br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nesciunt molestias quo odio ipsa rem eveniet, libero similique id. Facilis!</p>
+        <img src="images/modern-sports-car-speeds-through-dark-curve-generative-ai_188544-9136.avif" alt="carr">
+    </div>
+      <div class="swiper-slide"><p><span>02</span> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nesciunt molestias quo odio ipsa rem eveniet, libero similique id. Facilis!</p>
+        <img src="images/Без названия (3).jpg" alt="carr"></div>
+      <div class="swiper-slide"><p><span>03</span> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nesciunt molestias quo odio ipsa rem eveniet, libero similique id. Facilis!</p>
+        <img src="images/Без названия (4).jpg" alt=""></div>
+      <div class="swiper-slide"><p><span>04</span> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nesciunt molestias quo odio ipsa rem eveniet, libero similique id. Facilis!</p>
+    <img src="images/db1d329296e5a7c9c39a6ef181f432e91428a205.jpg" alt=""></div>
+      <div class="swiper-slide"><p><span>05</span> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nesciunt molestias quo odio ipsa rem eveniet, libero similique id. Facilis!</p>
+        <img src="images/Без названия (1).jpg" alt=""></div>
+      <div class="swiper-slide"><p><span>06</span> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nesciunt molestias quo odio ipsa rem eveniet, libero similique id. Facilis!</p>
+        <img src="images/view-three-dimensional-car_23-2150998581.avif" alt=""></div>
+      <div class="swiper-slide"><p><span>07</span> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nesciunt molestias quo odio ipsa rem eveniet, libero similique id. Facilis!</p>
+        <img src="images/Без названия (2).jpg" alt=""></div>
+      <div class="swiper-slide"><p><span>08</span> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nesciunt molestias quo odio ipsa rem eveniet, libero similique id. Facilis!</p>
+        <img src="images/Без названия.jpg" alt=""></div>
+      <div class="swiper-slide"><p><span>09</span> <br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis nesciunt molestias quo odio ipsa rem eveniet, libero similique id. Facilis!</p>
+        <img src="images/photo-1552519507-da3b142c6e3d.avif" alt=""></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+</div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper', {
+      slidesPerView: 3,
+      direction: getDirection(),
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      on: {
+        resize: function () {
+          swiper.changeDirection(getDirection());
+        },
+      },
+    });
+
+    function getDirection() {
+      var windowWidth = window.innerWidth;
+      var direction = window.innerWidth <= 760 ? 'vertical' : 'horizontal';
+
+      return direction;
+    }
+  </script>
+</body>
+
+</html>
